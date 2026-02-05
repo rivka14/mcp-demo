@@ -4,11 +4,8 @@ import os
 
 mcp = FastMCP("Heart Data Server")
 
-DATA_PATH = "heart.csv"
 DATA_PATH = os.path.join(os.path.dirname(__file__), "heart.csv")
 df = pd.read_csv(DATA_PATH)
-
-
 
 @mcp.tool()
 def get_age(age: int) -> str:
